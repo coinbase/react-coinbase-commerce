@@ -1,0 +1,12 @@
+src
+examples
+test
+dist/index.html
+.babelrc
+.flowconfig
+readme.*
+.gitignore
+.idea
+webpack.dev.config.js
+webpack.prod.config.js
+__mocks__

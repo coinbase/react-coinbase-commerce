@@ -1,0 +1,69 @@
+{
+  "name": "coinbase-commerce-react",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "flow src && jest",
+    "test:coverage": "jest --coverage",
+    "start": "webpack-dev-server --mode development --config webpack.dev.config.js",
+    "build": "webpack --config webpack.prod.config.js --mode production",
+    "transpile": "rm -rf ./dist && npm run build",
+    "prepublishOnly": "npm run test && npm run transpile",
+    "flow": "flow"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
+  "author": "Tyson Battistella",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "1.0.0",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "enzyme-to-json": "3.3.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "flow-bin": "^0.76.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
+    "jest": "23.3.0",
+    "mini-css-extract-plugin": "0.4.1",
+    "node-sass": "4.9.2",
+    "prettier": "1.13.7",
+    "pretty-quick": "^1.6.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-test-renderer": "16.4.1",
+    "sass-loader": "7.0.3",
+    "style-loader": "0.21.0",
+    "styled-components": "^3.3.3",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

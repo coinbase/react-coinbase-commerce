@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders and matches its snapshot 1`] = `
+<IFrame
+  checkoutId="aaaa"
+>
+  <div
+    className="coinbase-commerce-iframe-container"
+  >
+    <div
+      className="commerce-loading-spinner"
+    />
+    <iframe
+      allowtransparency="yes"
+      className="coinbase-commerce-iframe"
+      frameBorder="no"
+      scrolling="no"
+      src="https://commerce.coinbase.com/embed/checkout/aaaa?origin=about://&version=201807&buttonId=undefined"
+    />
+  </div>
+</IFrame>
+`;

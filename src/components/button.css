@@ -1,0 +1,41 @@
+button.coinbase-commerce-button {
+    border-radius: 6px;
+    background-color: #0667D0;
+    background: linear-gradient(#0667D0, #0655AB);
+    color: white;
+    height: 40px;
+    font-size: 14px;
+    font-family: Avenir Next, sans-serif;
+    font-weight: 500;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.coinbase-commerce-button:hover {
+  background: #0666D0;
+}
+button.coinbase-commerce-button:active {
+  background: #0655AB;
+}
+button.coinbase-commerce-button:focus {
+  outline: none;
+}
+button.coinbase-commerce-button:disabled {
+  background: #7D95B6;
+  color: rgba(0,0,0,.4);
+  cursor: not-allowed;
+}
+
+button.coinbase-commerce-button > span {
+  color: white;
+  font: normal 500 14px/20px -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  letter-spacing: 0;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  white-space: nowrap;
+}

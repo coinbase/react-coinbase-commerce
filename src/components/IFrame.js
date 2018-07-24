@@ -23,6 +23,7 @@ export default class IFrame extends React.Component<Props, State> {
   origin: string;
   ifr: any;
   uuid: string;
+  hostName: string;
 
   constructor(props:Props){
     super(props);

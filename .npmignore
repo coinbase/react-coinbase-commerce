@@ -10,3 +10,4 @@ readme.*
 webpack.dev.config.js
 webpack.prod.config.js
 __mocks__
+LICENSE

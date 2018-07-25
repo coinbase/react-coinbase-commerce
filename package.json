@@ -28,6 +28,9 @@
     ],
     "moduleNameMapper": {
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "globals": {
+        "VERSION": "1"
     }
   },
   "author": "Tyson Battistella",

@@ -15,7 +15,7 @@ exports[`it renders and matches its snapshot 1`] = `
       className="coinbase-commerce-iframe"
       frameBorder="no"
       scrolling="no"
-      src="https://commerce.coinbase.com/embed/checkout/aaaa?origin=about://&version=201807&buttonId=undefined"
+      src="https://commerce.coinbase.com/embed/checkout/aaaa?origin=about://&version=1&buttonId=undefined"
     />
   </div>
 </IFrame>

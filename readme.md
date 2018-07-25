@@ -1,3 +1,7 @@
+[![CircleCI](https://circleci.com/gh/coinbase/react-coinbase-commerce/tree/master.svg?style=svg)](https://circleci.com/gh/coinbase/react-coinbase-commerce/tree/master)
+[![npm version](https://badge.fury.io/js/react-coinbase-commerce.svg)](https://badge.fury.io/js/react-coinbase-commerce)
+
+
 # Coinbase Commerce React Button 
 A button to embed a Coinbase Commerce checkout or charge directly into your React application.
 

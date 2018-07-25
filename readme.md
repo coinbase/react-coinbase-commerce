@@ -2,7 +2,7 @@
 A button to embed a Coinbase Commerce checkout or charge directly into your React application.
 
 ```
-npm i -S coinbase-commerce-react 
+npm i -S react-coinbase-commerce 
 ```
 
 ## Features
@@ -18,8 +18,8 @@ npm i -S coinbase-commerce-react
 
 ## Usage
 ```ecmascript 6
-import CoinbaseCommerceButton from 'coinbase-commerce-react';
-import 'coinbase-commerce-react/dist/coinbase-commerce-button.css';
+import CoinbaseCommerceButton from 'react-coinbase-commerce';
+import 'react-coinbase-commerce/dist/coinbase-commerce-button.css';
 
 const App = () => {
   return (

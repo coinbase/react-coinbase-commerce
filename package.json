@@ -1,9 +1,9 @@
 {
-  "name": "coinbase-commerce-react",
+  "name": "react-coinbase-commerce",
   "version": "1.0.0",
   "description": "A react component to easily embed a Coinbase Commerce Checkout within your application",
   "keywords": ["react", "cryptocurrency", "coinbase", "commerce", "bitcoin", "litecoin", "ethereum"],
-  "homepage": "https://github.com/coinbase/coinbase-commerce-react",
+  "homepage": "https://github.com/coinbase/react-coinbase-commerce",
   "main": "dist/index.js",
   "scripts": {
     "test": "flow src && jest",

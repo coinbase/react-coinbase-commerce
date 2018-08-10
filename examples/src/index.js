@@ -8,13 +8,19 @@ class App extends React.Component{
     super(props);
 
     this.state = {
-      checkoutId: ''
+      checkoutId: '',
+      chargeId: ''
     };
     this.updateCheckoutId = this.updateCheckoutId.bind(this);
+    this.updateChargeId = this.updateChargeId.bind(this);
   }
 
   updateCheckoutId(e){
     this.setState({checkoutId: e.target.value})
+  }
+
+  updateChargeId(e){
+    this.setState({chargeId: e.target.value})
   }
 
   render(){
@@ -29,6 +35,18 @@ class App extends React.Component{
             <CoinbaseCommerceButton checkoutId={this.state.checkoutId}>Ugly Button With Crypto</CoinbaseCommerceButton>
             <Button checkoutId={this.state.checkoutId}>Pretty Custom Button</Button>
             <DangerButton checkoutId={'wrongo'}>This Button is Bad</DangerButton>
+          </React.Fragment>
+        ) : null}
+
+        <span>Enter a charge ID: </span>
+        <input type='text' onChange={this.updateChargeId}/><br/>
+        {this.state.chargeId.length > 0 ? (
+          <React.Fragment>
+            <CoinbaseCommerceButton styled={true} chargeId={this.state.chargeId}/>
+            <CoinbaseCommerceButton styled={true} disabled>Disabled Button</CoinbaseCommerceButton>
+            <CoinbaseCommerceButton chargeId={this.state.chargeId}>Ugly Button With Crypto</CoinbaseCommerceButton>
+            <Button chargeId={this.state.chargeId}>Pretty Custom Button</Button>
+            <DangerButton chargeId={'wrongo'}>This Button is Bad</DangerButton>
           </React.Fragment>
         ) : null}
       </div>

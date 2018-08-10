@@ -2,7 +2,15 @@
   "name": "react-coinbase-commerce",
   "version": "1.0.0",
   "description": "A react component to easily embed a Coinbase Commerce Checkout within your application",
-  "keywords": ["react", "cryptocurrency", "coinbase", "commerce", "bitcoin", "litecoin", "ethereum"],
+  "keywords": [
+    "react",
+    "cryptocurrency",
+    "coinbase",
+    "commerce",
+    "bitcoin",
+    "litecoin",
+    "ethereum"
+  ],
   "homepage": "https://github.com/coinbase/react-coinbase-commerce",
   "main": "dist/index.js",
   "scripts": {
@@ -30,7 +38,7 @@
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     },
     "globals": {
-        "VERSION": "1"
+      "VERSION": "1"
     }
   },
   "author": "Tyson Battistella",

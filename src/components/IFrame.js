@@ -102,7 +102,7 @@ export default class IFrame extends React.Component<Props, State> {
   render(){
     const {checkoutId, chargeId} = this.props;
 
-    const widgetType = checkoutId ? 'checkout' : chargeId ? 'charge' : null;
+    const widgetType = checkoutId ? 'checkout' : chargeId ? 'charges' : null;
     if(!widgetType){
       throw new Error('must supply either checkoutId or chargeId prop');
     }

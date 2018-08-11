@@ -39,7 +39,8 @@
     },
     "globals": {
       "VERSION": "1"
-    }
+    },
+    "testURL": "http://localhost"
   },
   "author": "Tyson Battistella",
   "license": "Apache 2.0",

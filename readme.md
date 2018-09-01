@@ -55,6 +55,7 @@ In addition to the regular `button` props, this component accepts some custom pr
 | `onChargeSuccess` | nil     | no                    | `(MessageData)=>void` |
 | `onChargeFailure` | nil     | no                    | `(MessageData)=>void` |
 | `onModalClosed`   | nil     | no                    | `()=>void`            |
+| `customMetadata`   | nil     | no                    | `string`              |
 
 ### Data Types
 ```

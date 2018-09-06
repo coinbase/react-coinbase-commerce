@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`it renders and matches its snapshot 1`] = `[Function]`;
+exports[`it renders and matches its snapshot 1`] = `
+<button>
+  Buy With Crypto
+</button>
+`;
 
 exports[`it renders and matches its snapshot when the style prop is given 1`] = `
-<Button
-  styled={true}
+<button
+  className="coinbase-commerce-button"
 >
-  <button
-    className="coinbase-commerce-button"
-  >
-    Test ?!
-  </button>
-</Button>
+  Test ?!
+</button>
 `;

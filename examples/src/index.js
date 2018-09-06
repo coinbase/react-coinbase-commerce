@@ -29,25 +29,25 @@ class App extends React.Component{
         <span>Enter a checkout ID: </span>
         <input type='text' onChange={this.updateCheckoutId}/><br/>
         {this.state.checkoutId.length > 0 ? (
-          <React.Fragment>
+          <div>
             <CoinbaseCommerceButton styled={true} checkoutId={this.state.checkoutId}/>
             <CoinbaseCommerceButton styled={true} disabled>Disabled Button</CoinbaseCommerceButton>
             <CoinbaseCommerceButton checkoutId={this.state.checkoutId}>Ugly Button With Crypto</CoinbaseCommerceButton>
             <Button checkoutId={this.state.checkoutId}>Pretty Custom Button</Button>
             <DangerButton checkoutId={'wrongo'}>This Button is Bad</DangerButton>
-          </React.Fragment>
+          </div>
         ) : null}
 
         <span>Enter a charge ID: </span>
         <input type='text' onChange={this.updateChargeId}/><br/>
         {this.state.chargeId.length > 0 ? (
-          <React.Fragment>
+          <div>
             <CoinbaseCommerceButton styled={true} chargeId={this.state.chargeId}/>
             <CoinbaseCommerceButton styled={true} disabled>Disabled Button</CoinbaseCommerceButton>
             <CoinbaseCommerceButton chargeId={this.state.chargeId}>Ugly Button With Crypto</CoinbaseCommerceButton>
             <Button chargeId={this.state.chargeId}>Pretty Custom Button</Button>
             <DangerButton chargeId={'wrongo'}>This Button is Bad</DangerButton>
-          </React.Fragment>
+          </div>
         ) : null}
       </div>
       )

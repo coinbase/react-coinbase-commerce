@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react';
-import Button from "./components/Button";
-import IFrame from "./components/IFrame";
-import type {MessageData} from "./types";
+import Button from './components/Button';
+import IFrame from './components/IFrame';
+import type {MessageData} from './types';
 
 type Props = {
   styled?: boolean,
@@ -33,10 +33,6 @@ class CoinbaseCommerceButton extends React.Component<Props, State>{
     this.state = {
       showModal: false
     };
-
-    this.handleButtonClick = this.handleButtonClick.bind(this);
-    this.handleModalClose = this.handleModalClose.bind(this);
-    this.handleError = this.handleError.bind(this);
   }
 
   handleButtonClick = () => {
@@ -65,12 +61,12 @@ class CoinbaseCommerceButton extends React.Component<Props, State>{
     const iFrameProps = {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId};
     const buttonProps = getButtonProps(this.props);
     return (
-      <React.Fragment>
-        <Button {...buttonProps} onClick={this.handleButtonClick.bind(this)}/>
+      <div>
+        <Button {...buttonProps} onClick={this.handleButtonClick}/>
         {showModal && (
-          <IFrame {...iFrameProps} onModalClose={this.handleModalClose.bind(this)} onError={this.handleError} customMetadata={customMetadata}/>
+          <IFrame {...iFrameProps} onModalClose={this.handleModalClose} onError={this.handleError} customMetadata={customMetadata}/>
         )}
-      </React.Fragment>
+      </div>
     )
   }
 }

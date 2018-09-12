@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`it opens up an iframe when its button is clicked 1`] = `
-<React.Fragment>
+<div>
   <Button
     onClick={[Function]}
   />
@@ -10,21 +10,13 @@ exports[`it opens up an iframe when its button is clicked 1`] = `
     onError={[Function]}
     onModalClose={[Function]}
   />
-</React.Fragment>
+</div>
 `;
 
 exports[`it renders and matches its snapshot 1`] = `
-<CoinbaseCommerceButton
-  checkoutId="aaaa"
->
+<div>
   <Button
     onClick={[Function]}
-  >
-    <button
-      onClick={[Function]}
-    >
-      Buy With Crypto
-    </button>
-  </Button>
-</CoinbaseCommerceButton>
+  />
+</div>
 `;

@@ -13,11 +13,11 @@ type Props = {
   onChargeFailure: (MessageData) => void,
   onError: (MessageData) =>  void,
   onModalClose: () => void
-}
+};
 
 type State = {
   loading: boolean
-}
+};
 
 export default class IFrame extends React.Component<Props, State> {
   origin: string;
@@ -29,10 +29,6 @@ export default class IFrame extends React.Component<Props, State> {
     super(props);
 
     this.origin = 'https://commerce.coinbase.com';
-
-    this.isValidMessage = this.isValidMessage.bind(this);
-    this.handleMessage = this.handleMessage.bind(this);
-    this.handleIFrameLoaded = this.handleIFrameLoaded.bind(this);
     this.uuid = generateUUID();
     this.hostName = `${window.location.protocol}//${window.location.hostname}${window.location.port ? ':' + window.location.port: ''}`;
 
@@ -42,10 +38,6 @@ export default class IFrame extends React.Component<Props, State> {
   }
 
   componentDidMount(){
-    // Use the reference to our mounted dom element to link an
-    // 'onload' callback to the iframe.
-    this.ifr.onload = this.handleIFrameLoaded;
-
     // Add event listeners for the iframe
     window.addEventListener('message', this.handleMessage);
   }
@@ -117,8 +109,8 @@ export default class IFrame extends React.Component<Props, State> {
           <div className="commerce-loading-spinner"/>
         ) : (null)}
         <iframe
+          onLoad={this.handleIFrameLoaded}
           className="coinbase-commerce-iframe"
-          ref={(r: any) => {this.ifr = r;}}
           src={src}
           allowtransparency={'yes'}
           scrolling={'no'}

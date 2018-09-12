@@ -1,12 +1,12 @@
 import React from 'react';
-import CoinbaseCommerceButton from "./index";
+import CoinbaseCommerceButton from './index';
 
 test('it renders and matches its snapshot', () => {
-  const wrapper  = mount(
+  const wrapper  = shallow(
     <CoinbaseCommerceButton checkoutId={'aaaa'}/>
   );
-  expect(wrapper.children().find('iframe').length).toEqual(0);
-  expect(wrapper.children().find('button').length).toEqual(1);
+  expect(wrapper.children().first().find('IFrame').length).toEqual(0);
+  expect(wrapper.children().first().find('Button').length).toEqual(1);
   expect(wrapper).toMatchSnapshot();
 });
 

@@ -1,6 +1,6 @@
 {
   "name": "react-coinbase-commerce",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A react component to easily embed a Coinbase Commerce Checkout within your application",
   "keywords": [
     "react",
@@ -45,7 +45,7 @@
   "author": "Tyson Battistella",
   "license": "Apache 2.0",
   "peerDependencies": {
-    "react": "^15.6.0 || ^16.4.0",
+    "react": "^15.6.0 || ^16.0.0",
     "react-dom": "^15.6.0 || ^16.0.0"
   },
   "devDependencies": {

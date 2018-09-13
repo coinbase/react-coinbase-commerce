@@ -22,9 +22,15 @@ type State = {
   loading: boolean
 };
 
+type SrcParams = {
+  origin: string,
+  version: string,
+  buttonId: string,
+  custom?: string
+}
+
 export default class IFrame extends React.Component<Props, State> {
   origin: string;
-  ifr: any;
   uuid: string;
   hostName: string;
 
@@ -75,18 +81,23 @@ export default class IFrame extends React.Component<Props, State> {
       throw new Error('must supply either checkoutId or chargeId prop');
     }
 
+    const params: SrcParams = {
+      origin: this.hostName,
+      version: VERSION,
+      buttonId: this.uuid,
+    };
+
     let custom = '';
     if (customMetadata && typeof customMetadata !== 'string') {
       console.error('Received customMetadata not of "string" type. Ignoring.');
     } else if (customMetadata) {
       custom = customMetadata
     }
-    const params = {
-      origin: this.hostName,
-      version: VERSION,
-      buttonId: this.uuid,
-      custom
-    };
+
+    if (custom){
+      params.custom = custom
+    }
+
     return `${this.origin}/embed/${widgetType}/${encodeURI(id)}?${encodeURIParams(params)}`;
   };
 

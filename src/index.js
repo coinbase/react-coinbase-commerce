@@ -9,6 +9,7 @@ type Props = {
   children?: React.Node,
   checkoutId?: string,
   chargeId?: string,
+  customMetadata?: string,
   onLoad: () => void,
   onChargeSuccess?: (MessageData) => void,
   onChargeFailure?: (MessageData) => void,
@@ -56,14 +57,14 @@ class CoinbaseCommerceButton extends React.Component<Props, State>{
 
   render(){
     const {showModal} = this.state;
-    const {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId} = this.props;
+    const {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId, customMetadata} = this.props;
     const iFrameProps = {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId};
     const buttonProps = getButtonProps(this.props);
     return (
       <div>
         <Button {...buttonProps} onClick={this.handleButtonClick}/>
         {showModal && (
-          <IFrame {...iFrameProps} onModalClose={this.handleModalClose} onError={this.handleError} />
+          <IFrame {...iFrameProps} onModalClose={this.handleModalClose} onError={this.handleError} customMetadata={customMetadata}/>
         )}
       </div>
     )

@@ -13,6 +13,7 @@ type Props = {
   onLoad: () => void,
   onChargeSuccess?: (MessageData) => void,
   onChargeFailure?: (MessageData) => void,
+  onPaymentDetected?: (MessageData) => void,
   onModalClosed?: () => void
 };
 type State = {
@@ -21,7 +22,15 @@ type State = {
 
 const getButtonProps = (props) => {
   const buttonProps = {...props};
-  const ignoredProps = ['onLoad', 'onChargeSuccess', 'onChargeFailure', 'checkoutId', 'chargeId'];
+  const ignoredProps = [
+    'onLoad',
+    'onChargeSuccess',
+    'onChargeFailure',
+    'customMetadata',
+    'onPaymentDetected',
+    'checkoutId',
+    'chargeId'
+  ];
   ignoredProps.forEach(p => delete buttonProps[p]);
   return buttonProps;
 };
@@ -57,8 +66,8 @@ class CoinbaseCommerceButton extends React.Component<Props, State>{
 
   render(){
     const {showModal} = this.state;
-    const {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId, customMetadata} = this.props;
-    const iFrameProps = {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId};
+    const {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId, customMetadata, onPaymentDetected} = this.props;
+    const iFrameProps = {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId, onPaymentDetected};
     const buttonProps = getButtonProps(this.props);
     return (
       <div>

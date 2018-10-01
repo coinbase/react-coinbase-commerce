@@ -21,7 +21,7 @@ npm i -S react-coinbase-commerce
 - [Docs](#docs)
 
 ## Usage
-```ecmascript 6
+```jsx
 import CoinbaseCommerceButton from 'react-coinbase-commerce';
 import 'react-coinbase-commerce/dist/coinbase-commerce-button.css';
 
@@ -58,7 +58,7 @@ In addition to the regular `button` props, this component accepts some custom pr
 | `customMetadata`   | nil     | no                    | `string`              |
 
 ### Data Types
-```
+```typescript
 type MessageData = {
   event: 'charge_confirmed' | 'charge_failed',
   code: <CHARGE_CODE>

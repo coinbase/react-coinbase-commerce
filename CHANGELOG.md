@@ -1,8 +1,12 @@
 # CHANGELOG
 All notable changes to this project will be documented in this file.
 
+## 1.2.0 - 2018-10-01
+### Added
+- You can now register for `onPaymentDetected` events.
+
 ## 1.1.0 - 2018-09-17
-### Changed
+### Added
 - Allow custom metadata to be included with charges
 
 ## 1.0.2 - 2018-09-13

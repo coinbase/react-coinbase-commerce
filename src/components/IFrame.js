@@ -16,7 +16,8 @@ type Props = {
   onChargeFailure: (MessageData) => void,
   onPaymentDetected: (MessageData) => void,
   onError: (MessageData) => void,
-  onModalClose: () => void
+  onModalClose: () => void,
+  disableCaching: boolean
 };
 
 type State = {
@@ -27,7 +28,8 @@ type SrcParams = {
   origin: string,
   version: string,
   buttonId: string,
-  custom?: string
+  custom?: string,
+  cacheDisabled: boolean
 }
 
 export default class IFrame extends React.Component<Props, State> {
@@ -57,7 +59,7 @@ export default class IFrame extends React.Component<Props, State> {
   }
 
   buildSrc = (): string => {
-    const {checkoutId, chargeId, customMetadata} = this.props;
+    const {checkoutId, chargeId, customMetadata, disableCaching} = this.props;
 
     function encodeURIParams(params) {
       let encoded = [];
@@ -86,6 +88,7 @@ export default class IFrame extends React.Component<Props, State> {
       origin: this.hostName,
       version: VERSION,
       buttonId: this.uuid,
+      cacheDisabled: disableCaching
     };
 
     let custom = '';

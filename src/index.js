@@ -30,7 +30,8 @@ const getButtonProps = (props) => {
     'customMetadata',
     'onPaymentDetected',
     'checkoutId',
-    'chargeId'
+    'chargeId',
+    'disableCaching'
   ];
   ignoredProps.forEach(p => delete buttonProps[p]);
   return buttonProps;

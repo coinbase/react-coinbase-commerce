@@ -59,7 +59,7 @@ In addition to the regular `button` props, this component accepts some custom pr
 | `disableCaching`   | false     | no                    | `boolean`            |
 | `customMetadata`   | nil     | no                    | `string`              |
 
-**Warning**: If `disableCaching` is set to `true`, users that accidentally close their payment windows will be unable to see their transaction's status. 
+**Warning**: If `disableCaching` is set to `true`, users that accidentally close their payment windows will be unable to see their transaction's status upon reopening. 
 
 ### Data Types
 ```

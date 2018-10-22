@@ -1,6 +1,11 @@
 # CHANGELOG
 All notable changes to this project will be documented in this file.
 
+## 1.3.0 - 2018-10-22
+### Added
+- Caching the state of a user's transaction can now be disabled with the `disableCaching` prop.
+- The component is now wrapped in an anchor tag
+
 ## 1.2.0 - 2018-10-01
 ### Added
 - You can now register for `onPaymentDetected` events.

@@ -1,6 +1,10 @@
 # CHANGELOG
 All notable changes to this project will be documented in this file.
 
+## 1.3.1 - 2018-10-22
+### Changed
+- Removed obsolete `allowTransparency` prop from iframe (fixes [#15](https://github.com/coinbase/react-coinbase-commerce/issues/15))
+
 ## 1.3.0 - 2018-10-22
 ### Added
 - Caching the state of a user's transaction can now be disabled with the `disableCaching` prop.

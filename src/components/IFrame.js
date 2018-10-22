@@ -164,7 +164,6 @@ export default class IFrame extends React.Component<Props, State> {
           onLoad={this.handleIFrameLoaded}
           className="coinbase-commerce-iframe"
           src={src}
-          allowtransparency={'yes'}
           scrolling={'no'}
           frameBorder="no"
         />

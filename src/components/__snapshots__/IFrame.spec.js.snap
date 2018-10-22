@@ -8,7 +8,6 @@ exports[`it renders and matches its snapshot 1`] = `
     className="commerce-loading-spinner"
   />
   <iframe
-    allowtransparency="yes"
     className="coinbase-commerce-iframe"
     frameBorder="no"
     onLoad={[Function]}

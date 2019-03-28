@@ -30,11 +30,24 @@ class App extends React.Component{
         <input type='text' onChange={this.updateCheckoutId}/><br/>
         {this.state.checkoutId.length > 0 ? (
           <div>
-            <CoinbaseCommerceButton styled={true} checkoutId={this.state.checkoutId}/>
+            <CoinbaseCommerceButton styled={true} checkoutId={this.state.checkoutId} />
             <CoinbaseCommerceButton styled={true} disabled>Disabled Button</CoinbaseCommerceButton>
             <CoinbaseCommerceButton checkoutId={this.state.checkoutId}>Ugly Button With Crypto</CoinbaseCommerceButton>
             <Button checkoutId={this.state.checkoutId}>Pretty Custom Button</Button>
             <DangerButton checkoutId={'wrongo'}>This Button is Bad</DangerButton>
+            <CoinbaseCommerceButton
+              wrapperStyle={{ width: '100%' }}
+              style={{
+                width: '100%',
+                color: 'green',
+                borderColor: 'green',
+                borderRadius: 4,
+                height: 45,
+                cursor: 'pointer',
+              }}
+              checkoutId={this.state.checkoutId}>
+              Custom Styles Button
+              </CoinbaseCommerceButton>
           </div>
         ) : null}
 

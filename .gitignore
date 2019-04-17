@@ -143,6 +143,8 @@ typings/
 # Serverless directories
 .serverless
 
+## CUSTOM
+dist/
 
 # End of https://www.gitignore.io/api/node,jetbrains+all
 #

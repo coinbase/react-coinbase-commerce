@@ -16,7 +16,7 @@ type Props = {
   onPaymentDetected?: (MessageData) => void,
   onModalClosed?: () => void,
   disableCaching: true,
-  wrapperStyle?: object,
+  wrapperStyle?: { [string]: number | string }
 };
 
 type State = {

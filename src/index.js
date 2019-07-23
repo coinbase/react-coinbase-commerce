@@ -15,8 +15,10 @@ type Props = {
   onChargeFailure?: (MessageData) => void,
   onPaymentDetected?: (MessageData) => void,
   onModalClosed?: () => void,
-  disableCaching: true
+  disableCaching: true,
+  wrapperStyle?: { [string]: number | string }
 };
+
 type State = {
   showModal: boolean
 };
@@ -31,7 +33,8 @@ const getButtonProps = (props) => {
     'onPaymentDetected',
     'checkoutId',
     'chargeId',
-    'disableCaching'
+    'disableCaching',
+    'wrapperStyle'
   ];
   ignoredProps.forEach(p => delete buttonProps[p]);
   return buttonProps;
@@ -68,11 +71,11 @@ class CoinbaseCommerceButton extends React.Component<Props, State>{
 
   render(){
     const {showModal} = this.state;
-    const {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId, customMetadata, onPaymentDetected, disableCaching} = this.props;
+    const {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId, customMetadata, onPaymentDetected, disableCaching, wrapperStyle} = this.props;
     const iFrameProps = {onLoad, onChargeSuccess, onChargeFailure, checkoutId, chargeId, onPaymentDetected, disableCaching};
     const buttonProps = getButtonProps(this.props);
     return (
-      <div>
+      <div style={wrapperStyle}>
         <a href="https://commerce.coinbase.com" rel="external" title="Pay with Bitcoin, Bitcoin Cash, Litecoin, or Ethereum" onClick={e => e.preventDefault()}>
           <Button {...buttonProps} onClick={this.handleButtonClick}/>
         </a>

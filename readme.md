@@ -56,12 +56,15 @@ In addition to the regular `button` props, this component accepts some custom pr
 | `onChargeFailure` | nil     | no                    | `(MessageData)=>void` |
 | `onPaymentDetected` | nil     | no                    | `(MessageData)=>void` |
 | `onModalClosed`   | nil     | no                    | `()=>void`            |
+| `disableCaching`   | false     | no                    | `boolean`            |
 | `customMetadata`   | nil     | no                    | `string`              |
+
+**Warning**: If `disableCaching` is set to `true`, users that accidentally close their payment windows will be unable to see their transaction's status upon reopening. 
 
 ### Data Types
 ```typescript
 type MessageData = {
-  event: 'charge_confirmed' | 'charge_failed',
+  event: 'charge_confirmed' | 'charge_failed' 'payment_detected',
   code: <CHARGE_CODE>
 }
 ```

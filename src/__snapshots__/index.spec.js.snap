@@ -2,9 +2,16 @@
 
 exports[`it opens up an iframe when its button is clicked 1`] = `
 <div>
-  <Button
+  <a
+    href="https://commerce.coinbase.com"
     onClick={[Function]}
-  />
+    rel="external"
+    title="Pay with Bitcoin, Bitcoin Cash, Litecoin, or Ethereum"
+  >
+    <Button
+      onClick={[Function]}
+    />
+  </a>
   <IFrame
     checkoutId="aaaa"
     onError={[Function]}
@@ -15,8 +22,15 @@ exports[`it opens up an iframe when its button is clicked 1`] = `
 
 exports[`it renders and matches its snapshot 1`] = `
 <div>
-  <Button
+  <a
+    href="https://commerce.coinbase.com"
     onClick={[Function]}
-  />
+    rel="external"
+    title="Pay with Bitcoin, Bitcoin Cash, Litecoin, or Ethereum"
+  >
+    <Button
+      onClick={[Function]}
+    />
+  </a>
 </div>
 `;

@@ -21,7 +21,8 @@ type Props = {
 };
 
 type State = {
-  loading: boolean
+  loading: boolean,
+  src: null | string
 };
 
 type SrcParams = {
@@ -42,23 +43,25 @@ export default class IFrame extends React.Component<Props, State> {
 
     this.origin = 'https://commerce.coinbase.com';
     this.uuid = generateUUID();
-    this.hostName = `${window.location.protocol}//${window.location.hostname}${window.location.port ? ':' + window.location.port : ''}`;
 
     this.state = {
-      loading: true
+      loading: true,
+      src: null
     }
   }
 
   componentDidMount(){
     // Add event listeners for the iframe
     window.addEventListener('message', this.handleMessage);
+    const hostName = `${window.location.protocol}//${window.location.hostname}${window.location.port ? ':' + window.location.port : ''}`;
+    this.setState({ src: this.buildSrc(hostName) });
   }
 
   componentWillUnmount() {
     window.removeEventListener('message', this.handleMessage);
   }
 
-  buildSrc = (): string => {
+  buildSrc = (hostName: string): string => {
     const {checkoutId, chargeId, customMetadata, disableCaching} = this.props;
 
     function encodeURIParams(params) {
@@ -85,7 +88,7 @@ export default class IFrame extends React.Component<Props, State> {
     }
 
     const params: SrcParams = {
-      origin: this.hostName,
+      origin: hostName,
       version: VERSION,
       buttonId: this.uuid,
       cacheDisabled: disableCaching
@@ -154,19 +157,22 @@ export default class IFrame extends React.Component<Props, State> {
   };
 
   render() {
-    const src = this.buildSrc();
+    const { loading, src } = this.state;
+
     return (
       <div className="coinbase-commerce-iframe-container">
-        {this.state.loading ? (
+        {loading || src === null && (
           <div className="commerce-loading-spinner"/>
-        ) : (null)}
-        <iframe
-          onLoad={this.handleIFrameLoaded}
-          className="coinbase-commerce-iframe"
-          src={src}
-          scrolling={'no'}
-          frameBorder="no"
-        />
+        )}
+        {src !== null && (
+          <iframe
+            onLoad={this.handleIFrameLoaded}
+            className="coinbase-commerce-iframe"
+            src={src}
+            scrolling="no"
+            frameBorder="no"
+          />
+        )}
       </div>
     )
   }

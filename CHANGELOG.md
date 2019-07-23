@@ -1,6 +1,11 @@
 # CHANGELOG
 All notable changes to this project will be documented in this file.
 
+## 1.4.0 - 2019-07-23
+### Added
+- Added a `wrapperStyle` prop to allow further styling on the Button component
+- Added support for serverside rendering
+
 ## 1.3.1 - 2018-10-22
 ### Changed
 - Removed obsolete `allowTransparency` prop from iframe (fixes [#15](https://github.com/coinbase/react-coinbase-commerce/issues/15))

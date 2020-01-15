@@ -1,6 +1,10 @@
 # CHANGELOG
 All notable changes to this project will be documented in this file.
 
+## 1.4.1 - 2019-01-14
+### Changed
+- Updated dependencies submitted by dependabot
+
 ## 1.4.0 - 2019-07-23
 ### Added
 - Added a `wrapperStyle` prop to allow further styling on the Button component

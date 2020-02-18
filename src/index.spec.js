@@ -4,7 +4,7 @@ import CoinbaseCommerceButton from './index';
 
 test('SSR properly renders clickable link without errors', () => {
   const string = renderToString(<CoinbaseCommerceButton checkoutId="aaaa"/>);
-  expect(string).toBe('<div data-reactroot=""><a href="https://commerce.coinbase.com" rel="external" title="Pay with Bitcoin, Bitcoin Cash, Litecoin, or Ethereum"><button>Buy With Crypto</button></a></div>');
+  expect(string).toBe('<div data-reactroot=""><a href="https://commerce.coinbase.com" rel="external" title="Pay with Bitcoin, Bitcoin Cash, DAI, Litecoin, Ethereum, or USD Coin"><button>Buy With Crypto</button></a></div>');
 });
 
 test('it renders and matches its snapshot', () => {

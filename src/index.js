@@ -76,7 +76,7 @@ class CoinbaseCommerceButton extends React.Component<Props, State>{
     const buttonProps = getButtonProps(this.props);
     return (
       <div style={wrapperStyle}>
-        <a href="https://commerce.coinbase.com" rel="external" title="Pay with Bitcoin, Bitcoin Cash, Litecoin, or Ethereum" onClick={e => e.preventDefault()}>
+        <a href="https://commerce.coinbase.com" rel="external" title="Pay with Bitcoin, Bitcoin Cash, DAI, Litecoin, Ethereum, or USD Coin" onClick={e => e.preventDefault()}>
           <Button {...buttonProps} onClick={this.handleButtonClick}/>
         </a>
         {showModal && (

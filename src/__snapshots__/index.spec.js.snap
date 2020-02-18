@@ -6,7 +6,7 @@ exports[`it opens up an iframe when its button is clicked 1`] = `
     href="https://commerce.coinbase.com"
     onClick={[Function]}
     rel="external"
-    title="Pay with Bitcoin, Bitcoin Cash, Litecoin, or Ethereum"
+    title="Pay with Bitcoin, Bitcoin Cash, DAI, Litecoin, Ethereum, or USD Coin"
   >
     <Button
       onClick={[Function]}
@@ -26,7 +26,7 @@ exports[`it renders and matches its snapshot 1`] = `
     href="https://commerce.coinbase.com"
     onClick={[Function]}
     rel="external"
-    title="Pay with Bitcoin, Bitcoin Cash, Litecoin, or Ethereum"
+    title="Pay with Bitcoin, Bitcoin Cash, DAI, Litecoin, Ethereum, or USD Coin"
   >
     <Button
       onClick={[Function]}

@@ -1,6 +1,10 @@
 # CHANGELOG
 All notable changes to this project will be documented in this file.
 
+## 1.4.2 - 2020-05-14
+### Changed
+- Updated acorn dependency
+
 ## 1.4.1 - 2019-01-14
 ### Changed
 - Updated dependencies submitted by dependabot

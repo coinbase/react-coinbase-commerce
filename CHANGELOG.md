@@ -1,6 +1,25 @@
 # CHANGELOG
 All notable changes to this project will be documented in this file.
 
+## 1.4.5 - 2020-09-14
+### Changed
+- Updated http-proxy dependency (1.18.0 to 1.18.1)
+- Added Example instructions clarification in readme.md
+- Updated jest dev dependency (23.3.0 to ^26.4.2)
+- Updated node-sass dev dependency (4.9.2 to ^4.14.1)
+- Updated react-test-renderer dev dependency (16.4.1 to ^16.13.1)
+- Updated serialize-javascript dev dependency (>=2.1.1 to ^5.0.1)
+- Updated webpack dev dependency (^4.15.1 to ^4.44.1)
+- Updated webpack-dev-server dev dependency (^3.1.4 to ^3.11.0)
+
+## 1.4.4 - 2020-07-21
+### Changed
+- Updated elliptic dependency (6.5.2 to 6.5.3)
+
+## 1.4.3 - 2020-05-14
+### Changed
+- Updated lodash dependency (4.17.15 to 4.17.19)
+
 ## 1.4.2 - 2020-05-14
 ### Changed
 - Updated acorn dependency

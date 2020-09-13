@@ -18,6 +18,7 @@ npm i -S react-coinbase-commerce
 ### Table of Contents
 - [Usage](#usage)
 - [Getting Started](#getting-started)
+- [Example](#example)
 - [Docs](#docs)
 
 ## Usage
@@ -40,6 +41,17 @@ account [here](https://commerce.coinbase.com).
     - Alternatively, create a checkout from the merchant dashboard and copy the ID found in the checkout's details. 
 1. Pass the ID of the charge or checkout you create to the `CoinbaseCommerceButton` component
 1. That's it! You're ready to start accepting digital currency payments with Coinbase Commerce
+
+## Example
+You can test the button by spinning up a local webpack-dev server and navigating your browser to http://localhost:3333
+
+```
+# Install dependencies
+npm install
+
+# Start the server, and go to http://localhost:3333
+npm start
+```
 
 ## Docs
 

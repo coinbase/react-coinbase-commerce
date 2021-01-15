@@ -30,7 +30,6 @@ module.exports = {
   output: {
     path: path.join(__dirname, './dist'),
     filename: 'index.js',
-    library: 'react-coinbase-commerce',
     libraryTarget: 'commonjs2',
     publicPath: '/dist/',
     // umdNamedDefine: true

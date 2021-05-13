@@ -19,6 +19,7 @@ npm i -S react-coinbase-commerce
 - [Usage](#usage)
 - [Getting Started](#getting-started)
 - [Docs](#docs)
+- [Contributing](#contributing)
 
 ## Usage
 ```jsx
@@ -67,4 +68,49 @@ type MessageData = {
   event: 'charge_confirmed' | 'charge_failed' 'payment_detected',
   code: <CHARGE_CODE>
 }
+```
+
+## Contributing
+To contribute to `react-coinbase-commerce` please fork the repo and open a Pull Request.
+
+### Installation
+```sh
+npm install
+```
+
+### Running the dev server
+```sh
+npm start
+```
+
+### Running the dev server with HTTPS
+In some cases, you may need to run the dev server [with HTTPS](https://web.dev/how-to-use-local-https/). To use HTTPS locally in development and access https://localhost, you'll first need a [TLS certificate](https://en.wikipedia.org/wiki/Public_key_certificate#TLS/SSL_server_certificate). See setup instructions to prepair your local environment before starting your server with HTTPS.
+
+```sh
+npm run start:secure
+```
+
+### Setting up HTTPS for local develpment
+Before starting your local server with HTTPS, you'll need to prepair your environment and install some local certs. To do so, follow the setps bellow:
+
+#### 1. Install mkcert.
+Follow [the instructions](https://github.com/FiloSottile/mkcert#installation) for installing mkcert on your operating system. For example, on macOS:
+
+```sh
+brew install mkcert
+brew install nss # if you use Firefox
+```
+
+#### 2. Add mkcert to your local root CAs.
+This generates a local certificate authority (CA). Your mkcert-generated local CA is only trusted **locally**, on your device.
+
+```sh
+mkcert -install
+```
+
+#### 3. Generate a certificate for your site, signed by mkcert.
+In your terminal, navigate to the root directory and run:
+
+```sh
+mkcert localhost
 ```

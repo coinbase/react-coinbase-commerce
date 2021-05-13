@@ -17,6 +17,7 @@
     "test": "flow src && jest",
     "test:coverage": "jest --coverage",
     "start": "webpack-dev-server --mode development --config webpack.dev.config.js",
+    "start:secure": "webpack-dev-server --mode development --config webpack.dev.config.js --https --key ./localhost-key.pem --cert ./localhost.pem",
     "build": "webpack --config webpack.prod.config.js --mode production",
     "transpile": "rm -rf ./dist && npm run build",
     "prepublishOnly": "npm run test && npm run transpile",

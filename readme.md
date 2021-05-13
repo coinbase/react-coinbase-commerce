@@ -87,7 +87,7 @@ npm start
 In some cases, you may need to run the dev server [with HTTPS](https://web.dev/how-to-use-local-https/). To use HTTPS locally in development and access https://localhost, you'll first need a [TLS certificate](https://en.wikipedia.org/wiki/Public_key_certificate#TLS/SSL_server_certificate). See setup instructions to prepair your local environment before starting your server with HTTPS.
 
 ```sh
-npm run start:secure
+npm start:secure
 ```
 
 ### Setting up HTTPS for local develpment

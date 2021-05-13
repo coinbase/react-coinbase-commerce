@@ -143,6 +143,9 @@ typings/
 # Serverless directories
 .serverless
 
+## HTTPS certs
+*.pem
+
 ## CUSTOM
 dist/
 

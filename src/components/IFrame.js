@@ -53,7 +53,7 @@ export default class IFrame extends React.Component<Props, State> {
   componentDidMount(){
     // Add event listeners for the iframe
     window.addEventListener('message', this.handleMessage);
-    const hostName = `${window.location.protocol}//${window.location.hostname}${window.location.port ? ':' + window.location.port : ''}`;
+    const hostName = `${window.location.protocol}//${window.location.hostname}${window.location.port ? ':' + window.location.port : ''}/`;
     this.setState({ src: this.buildSrc(hostName) });
   }
 

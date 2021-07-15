@@ -9,6 +9,7 @@
     "commerce",
     "bitcoin",
     "litecoin",
+    "dogecoin",
     "ethereum"
   ],
   "homepage": "https://github.com/coinbase/react-coinbase-commerce",

@@ -1,5 +1,5 @@
 opaque type OrderCode = string;
-type Network = 'bitcoin' | 'bitcoincash' | 'ethereum' | 'litecoin'
+type Network = 'bitcoin' | 'bitcoincash' | 'ethereum' | 'litecoin' | 'dogecoin'
 type PricingType = 'fixed_price' | 'no_price'
 type PaymentStatus = 'NEW' | 'PENDING' | 'CONFIRMED' | 'FAILED'
 type FiatCurrency = string
@@ -18,7 +18,8 @@ type ChargePricing = {|
   bitcoin: ?CryptoMoney,
   bitcoincash: ?CryptoMoney,
   ethereum: ?CryptoMoney,
-  litecoin: ?CryptoMoney
+  litecoin: ?CryptoMoney,
+  dogecoin: ?CryptoMoney
 |}
 
 

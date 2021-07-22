@@ -3,6 +3,8 @@
 
 
 # Coinbase Commerce React Button 
+**Note**: This repository is not actively maintained.
+
 A button to embed a Coinbase Commerce checkout or charge directly into your React application.
 
 ```

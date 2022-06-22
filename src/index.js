@@ -31,6 +31,7 @@ const getButtonProps = (props) => {
     'onChargeFailure',
     'customMetadata',
     'onPaymentDetected',
+    'onModalClosed',
     'checkoutId',
     'chargeId',
     'disableCaching',
